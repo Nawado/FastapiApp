@@ -1,11 +1,11 @@
 from typing import AsyncGenerator, Callable, Type
 
-from asyncpg.connection import Connection
-from asyncpg.pool import Pool
+from aiomysql.connection import Connection
+from aiomysql.pool import Pool
 from fastapi import Depends
 from starlette.requests import Request
 
-from app.db.repositories.base import BaseRepository
+from app.db.repos.base import BaseRepository
 
 
 def _get_db_pool(request: Request) -> Pool:

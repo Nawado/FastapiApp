@@ -14,5 +14,5 @@ exchanges_table = sqlalchemy.Table(
 	Column('currency', String),
 	Column('countryIso2', String),
 	Column('countryIso3', String),
-	Column('tickers', String)
+	Column('OperatingMIC', String)
 )

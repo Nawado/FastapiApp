@@ -1,14 +1,18 @@
-import asyncpgsa
+import aiomysql
 from fastapi import FastAPI
 
-from app.core.settings import DATABASE_URL
+from app.core.settings import MY_SQL_SERVER, MY_SQL_DB, MY_SQL_PORT, MY_SQL_USER, MY_SQL_PASSWORD
 
 
 async def connect_to_db(app: FastAPI) -> None:
-    app.state.pool = await asyncpgsa.create_pool(
-        str(DATABASE_URL),
-        min_size=3,
-        max_size=10
+    app.state.pool = await aiomysql.create_pool(
+        host=str(MY_SQL_SERVER),
+        port=int(MY_SQL_PORT),
+        user=str(MY_SQL_USER),
+        password=str(MY_SQL_PASSWORD),
+        db=str(MY_SQL_DB),
+        minsize=3,
+        maxsize=10
     )
 
 

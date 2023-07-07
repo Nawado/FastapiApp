@@ -17,9 +17,4 @@ MY_SQL_DB = config("MY_SQL_DB", cast=str, default="my_sql")
 MY_SQL_PORT = config("MY_SQL_PORT", cast=str, default="3306")
 MY_SQL_USER = config("MY_SQL_USER", cast=str, default="my_sql")
 MY_SQL_PASSWORD = config("MY_SQL_PASSWORD", cast=Secret, default="my_sql")
-DATABASE_URL = config(
-  "DATABASE_URL",
-  cast=DatabaseURL,
-  default=f"mysql://{MY_SQL_USER}:{MY_SQL_PASSWORD}@{MY_SQL_SERVER}:{MY_SQL_PORT}/{MY_SQL_DB}"
-)
 

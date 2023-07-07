@@ -10,4 +10,4 @@ class ExchangeInDB(BaseModel):
     currency: str
     countryIso2: str
     countryIso3: str
-    tickers: str
+    OperatingMIC: str

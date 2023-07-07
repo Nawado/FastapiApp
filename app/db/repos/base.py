@@ -1,4 +1,4 @@
-from asyncpg.connection import Connection
+from aiomysql.connection import Connection
 
 
 class BaseRepository:

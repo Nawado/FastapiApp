@@ -10,5 +10,5 @@ class MarketInDB(BaseModel):
     currency: str
     timezone: Optional[str]
     isopen: bool
-	active_tickers: Optional[int]
-	update_tickers: Optional[int]
+    active_tickers: Optional[int]
+    update_tickers: Optional[int]

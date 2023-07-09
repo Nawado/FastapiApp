@@ -18,7 +18,6 @@ class ExchangeRepository(BaseRepository):
                 
                 columns = [desc[0] for desc in cursor.description]
                 row = await cursor.fetchone()
-                print('COLUMNS ', row)
                 result = dict(zip(columns, row))
                 if not row:
                         return None
